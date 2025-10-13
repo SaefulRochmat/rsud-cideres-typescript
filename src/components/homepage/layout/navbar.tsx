@@ -3,8 +3,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { Nav_Items } from "@/lib/homepage/constants";
 import { navItem } from "@/types/homepage/navbar";
-import { Button } from "@/components/homepage/ui/button"
-import { redirect } from "next/navigation";
 import Image from "next/image";
 
 export default function Navbar() {
@@ -41,40 +39,54 @@ export default function Navbar() {
                             {item.label}
                         </Link>
                     ))}
-                    {/**<Button label="Login" onClick={() => alert("Fitur ini belum tersedia")} fullWidth={false}>
-                    </Button>*/}
                 </div>
 
                 {/* Button Mobile */}
                 <button
                     onClick={toggleMenu}
-                    className="md:hidden flex flex-col gap-1"
+                    className="md:hidden flex flex-col gap-1 hover:scale-105 transition duration-300 ease-in-out"
                     aria-label="Toggle Menu"
+                    aria-expanded={isOpen}
                 >
-                    <span className="w-6 h-1 bg-gray-800"></span>
-                    <span className="w-6 h-1 bg-gray-800"></span>
-                    <span className="w-6 h-1 bg-gray-800"></span>
+                    <span
+                        className={`w-6 h-1 bg-gray-800 transition-all duration-300 ease-in-out ${
+                            isOpen ? 'translate-y-[6px] rotate-45' : ''
+                        }`}
+                    ></span>
+                    <span
+                        className={`w-6 h-1 bg-gray-800 transition-all duration-300 ease-in-out ${
+                            isOpen ? 'opacity-0' : 'opacity-100'
+                        }`}
+                    ></span>
+                    <span
+                        className={`w-6 h-1 bg-gray-800 transition-all duration-300 ease-in-out ${
+                            isOpen ? '-translate-y-[6px] -rotate-45' : ''
+                        }`}
+                    ></span>
                 </button>
 
                 {/* Menu Mobile */}
-                {isOpen && (
-                    <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md">
-                        <div className="flex flex-col gap-4 items-center py-4">
-                            {Nav_Items.map((item: navItem) => (
-                                <Link 
-                                    key={item.href} 
-                                    href={item.href}
-                                    target={item.external ? "_blank" : "_self"}
-                                    className="text-gray-700 hover:text-gray-600 transition"
-                                >
-                                    {item.label}
-                                </Link>
-                            ))}
-                            <Button label="Login" onClick={() => redirect("/login")} fullWidth={true}>
-                            </Button>
-                        </div>
+                <div
+                    className={`md:hidden absolute top-full left-0 w-full bg-white ${
+                        isOpen
+                            ? 'opacity-100 translate-y-0 max-h-[60vh] shadow-md pointer-events-auto'
+                            : 'opacity-0 -translate-y-2 max-h-0 pointer-events-none'
+                    } transition-all duration-300 ease-out overflow-hidden`}
+                    aria-hidden={!isOpen}
+                >
+                    <div className="flex flex-col gap-4 items-center py-4 px-2">
+                        {Nav_Items.map((item: navItem) => (
+                            <Link 
+                                key={item.href} 
+                                href={item.href}
+                                target={item.external ? "_blank" : "_self"}
+                                className="w-full text-gray-700 hover:text-red-500 hover:shadow-md hover:-translate-y-1 transition duration-300 px-5 py-2"
+                            >
+                                {item.label}
+                            </Link>
+                        ))}
                     </div>
-                )}
+                </div>
             </div>
         </nav>
     );
