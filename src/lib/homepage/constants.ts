@@ -17,21 +17,21 @@ export const Nav_Items: navItem[] = [
 export const SLIDES: SliderProps[] = [
     {
         id: 1,
-        imageUrl: "https://images.unsplash.com/photo-1611307742746-43cbea512c37?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        title: "First Slide",
-        description: "This is the first slide."
+        imageUrl: "https://plus.unsplash.com/premium_photo-1681995284211-b0ea14a73cbc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=871",
+        title: "RSUD Cideres",
+        description: "Memberikan layanan kesehatan terbaik kepada masyarakat"
     },
     {
         id: 2,
-        imageUrl: "https://images.unsplash.com/photo-1618856921788-9bc0b6ff8ca2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        title: "Second Slide",
-        description: "This is the second slide."
+        imageUrl: "https://images.unsplash.com/photo-1518152006812-edab29b069ac?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
+        title: "Fasilitas Lengkap & Modern",
+        description: "Didukung fasilitas lengkap, kami memastikan layanan medis yang optimal untuk seluruh keluarga."
     },
     {
         id: 3,
-        imageUrl: "https://plus.unsplash.com/premium_photo-1676580191820-f5a69ca8ee16?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        title: "Third Slide",
-        description: "This is the third slide."
+        imageUrl: "https://plus.unsplash.com/premium_photo-1661281397737-9b5d75b52beb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=869",
+        title: "Dokter & Tenaga Medis Berkualitas",
+        description: "Kami siap melayani Anda dengan ramah serta mengutamakan kenyamanan dan keselamatan pasien."
     }
 ]
 

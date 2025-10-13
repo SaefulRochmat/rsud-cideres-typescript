@@ -42,60 +42,62 @@ export default function ImageSlider({
   }, [cardIndex]);
   return (
     <>
-    <div className="relative w-full h-[90vh] overflow-hidden shadow-lg">
-      {slides.map((slide, index) => (
-        <div
-          key={slide.id}
-          className={`absolute inset-0 transition-all duration-700 ease-in-out transform
-            ${index === currentIndex 
-              ? "translate-x-0 opacity-100" 
-              : index < currentIndex 
-                ? "-translate-x-full opacity-0" 
-                : "translate-x-full opacity-0"
-            }`}
-        >
-          <Image
-            src={slide.imageUrl}
-            alt={slide.title || "Slide image"}
-            fill
-            className="object-cover"
-            priority={index === 0}
-          />
-          {/* Overlay teks */}
-          <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center text-white p-4">
-            <h2 className="text-3xl font-bold">{slide.title}</h2>
-            <p className="text-lg mt-2">{slide.description}</p>
+      {/* Hero Slider*/}
+      <div className="relative w-full h-[90vh] overflow-hidden shadow-lg">
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`absolute inset-0 transition-all duration-700 ease-in-out transform
+              ${index === currentIndex 
+                ? "translate-x-0 opacity-100" 
+                : index < currentIndex 
+                  ? "-translate-x-full opacity-0" 
+                  : "translate-x-full opacity-0"
+              }`}
+          >
+            <Image
+              src={slide.imageUrl}
+              alt={slide.title || "Slide image"}
+              fill
+              className="object-cover"
+              priority={index === 0}
+            />
+            {/* Overlay teks */}
+            <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center text-white p-4">
+              <h2 className="text-3xl font-bold">{slide.title}</h2>
+              <p className="text-lg mt-2">{slide.description}</p>
+            </div>
           </div>
-        </div>
-      ))}
-
-      {/* Tombol navigasi */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 hover:text-yellow-500 transition"
-      >
-        ❮
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 hover:text-yellow-500 transition"
-      >
-        ❯
-      </button>
-
-      {/* Indikator slide */}
-      <div className="absolute bottom-38 w-full flex justify-center gap-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-6 h-1 rounded-full ${
-              index === currentIndex ? "bg-yellow-500" : "bg-gray-400"
-            }`}
-          ></button>
         ))}
+
+        {/* Tombol navigasi */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 hover:text-yellow-500 transition"
+        >
+          ❮
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 hover:text-yellow-500 transition"
+        >
+          ❯
+        </button>
+
+        {/* Indikator slide */}
+        <div className="absolute bottom-38 w-full flex justify-center gap-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-6 h-1 rounded-full ${
+                index === currentIndex ? "bg-yellow-500" : "bg-gray-400"
+              }`}
+            ></button>
+          ))}
+        </div>
       </div>
-    </div>
+      
       {/* CARD */}
       <div className="w-full z-10 absolute top-[84%] -translate-y-1/2">
         <div className="max-w-7xl mx-auto px-3">
