@@ -12,7 +12,7 @@ export default function Navbar() {
         setIsOpen(!isOpen);
     }
     return(
-        <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <nav className="fixed top-0 left-0 w-full bg-white/80 shadow-md z-50">
             <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
                 {/* Logo */}
                 <div className="flex items-start">
@@ -20,21 +20,21 @@ export default function Navbar() {
                         <Image
                             src="http://rsudcideres.majalengkakab.go.id/vendor/front/assets/img/logo-header.png"
                             alt="logo"
-                            width={250}
-                            height={200}
+                            width={350}
+                            height={300}
                             className="object-contain"
                         />
                     </Link>
                 </div>
 
                 {/* Menu Desktop */}
-                <div className="hidden md:flex gap-8 items-center text-xl font-semibold">
+                <div className="hidden md:flex gap-8 items-center font-semibold">
                     {Nav_Items.map((item: navItem) => (
                         <Link 
                             key={item.href} 
                             href={item.href}
                             target={item.external ? "_blank" : "_self"}
-                            className="text-[#006BFF] underline-offset-6 hover:text-red-400 transition duration-400 ease-in-out"
+                            className="text-[#646464] underline-offset-6 hover:text-[#f53030] transition duration-400 ease-in-out"
                         >
                             {item.label}
                         </Link>

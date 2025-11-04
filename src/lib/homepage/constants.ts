@@ -58,7 +58,7 @@ export const cardData: CardData[] = [
     {
       title: "Dokter Berkualitas",
       subtitle: "KESEHATAN ANDA PRIORITAS",
-      description: "Kami mengutamakan pasien dengan pelayanan terbaik. Dengan dokter yang berpengalaman dan tenaga medis profesional",
+      description: "Kami mengutamakan pasien dengan pelayanan terbaik. Dengan dokter yang berpengalaman dan tenaga medis profesional.",
     },
     {
       title: "Layanan 24 Jam",
@@ -68,7 +68,7 @@ export const cardData: CardData[] = [
     {
       title: "Selalu Hadir untuk Anda",
       subtitle: "INSTALASI GAWAT DARURAT (IGD)",
-      description: "Siap melayani kebutuhan darurat dengan cepat dan tepat. Tim medis berpengalaman selalu siaga 24 jam memberikan penanganan pasien kondisi darurat",
+      description: "Siap melayani kebutuhan darurat dengan cepat dan tepat. Tim medis berpengalaman selalu siaga 24 jam memberikan penanganan pasien kondisi darurat.",
     },
   ];
 
