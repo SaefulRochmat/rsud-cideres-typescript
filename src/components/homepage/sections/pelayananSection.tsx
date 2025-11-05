@@ -19,22 +19,22 @@ const layananList: Layanan[] = [
   {
     title: "Klinik Mata",
     href: "/layanan",
-    image: "https://images.unsplash.com/photo-1576765608619-6e8caa3f7f34?q=80&w=600&auto=format&fit=crop",
+    image: "https://plus.unsplash.com/premium_photo-1683121056759-834df7725c99?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
   },
   {
     title: "Klinik Jiwa",
     href: "/layanan",
-    image: "https://images.unsplash.com/photo-1581093458791-9d6cc51b41a6?q=80&w=600&auto=format&fit=crop",
+    image: "https://rsudmajalengka.co.id/images/services/2149191355_JDpD.jpg",
   },
   {
     title: "Klinik THT",
     href: "/layanan",
-    image: "https://images.unsplash.com/photo-1612277794798-731b3ffe9c63?q=80&w=600&auto=format&fit=crop",
+    image: "https://plus.unsplash.com/premium_photo-1673958772211-f5817bd9e34a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
   },
   {
     title: "Klinik Kulit dan Kelamin",
     href: "/layanan",
-    image: "https://images.unsplash.com/photo-1620212181398-71b4d07c2295?q=80&w=600&auto=format&fit=crop",
+    image: "https://plus.unsplash.com/premium_photo-1661779386497-1f7b9ec4d8f3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
   },
 ];
 
@@ -44,17 +44,17 @@ export default function PelayananSection() {
       {/* Header */}
       <div className="flex justify-between items-center mb-8 flex-wrap gap-4">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+          <h1 className="text-xl md:text-2xl font-bold text-gray-800 font-quicksand">
             Layanan Spesialis
-          </h2>
-          <p className="text-gray-500 mt-1 text-base md:text-lg">
+          </h1>
+          <p className="text-[#646464] mt-1 text-sm md:text-base">
             Layanan spesialis lengkap dengan perawatan profesional dan teknologi modern.
           </p>
-          <div className="w-16 h-[3px] bg-yellow-500 mt-2 rounded-full"></div>
+          <div className="w-16 h-[3px] bg-[#ffb120] mt-2 rounded-full"></div>
         </div>
         <Link
           href="/layanan"
-          className="text-green-600 font-medium hover:underline hover:underline-offset-4"
+          className="text-[#b12323] font-primary font-semibold hover:underline hover:underline-offset-4"
         >
           More →
         </Link>
@@ -65,22 +65,21 @@ export default function PelayananSection() {
         {layananList.map((item, index) => (
           <motion.div
             key={index}
-            whileHover={{ y: -5, scale: 1.03 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             <Link
               href={item.href}
-              className="group flex flex-col items-center justify-center bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:bg-[#b12323] transition-all duration-300"
+              className="group flex flex-col items-center justify-center bg-white rounded-2xl p-6 hover:bg-[#b12323] transition duration-400"
             >
-              <div className="relative w-24 h-24 mb-4">
+              <div className="relative aspect-square min-w-[150px] sm:min-w-[180px] md:min-w-[200px] lg:min-w-[200px] mb-4">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="rounded-full object-cover border-4 border-white shadow-md group-hover:translate-y-12 transition-transform duration-300"
+                  className="rounded-full object-cover border-4 border-white shadow-md group-hover:translate-y-14 transition-transform duration-300"
                 />
               </div>
-              <h3 className="text-lg font-medium text-gray-800 text-center transition-all duration-500 group-hover:-translate-y-28">
+              <h3 className="text-lg font-medium text-[#646464] text-center transition-all duration-1000 group-hover:-translate-y-41 md:group-hover:-translate-y-55 group-hover:text-white/80">
                 {item.title}
               </h3>
             </Link>

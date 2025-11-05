@@ -75,50 +75,50 @@ export const cardData: CardData[] = [
 export const beritaData: Berita[] = [
     {
         id: 1,
-        judul: "Judul Berita 1",
-        isi: "Isi berita 1",
-        gambar: "https://images.unsplash.com/photo-1611307742746-43cbea512c37?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        tanggal: "2023-01-01",
-        buttonText: "Baca Selengkapnya"
+        judul: "RSUD Cideres Luncurkan Layanan Rawat Jalan Digital",
+        isi: "Rumah Sakit Umum Daerah (RSUD) Cideres resmi meluncurkan sistem pendaftaran rawat jalan berbasis digital. Melalui aplikasi ini, pasien dapat mendaftar dari rumah tanpa harus antre di loket. Direktur RSUD Cideres menyebut inovasi ini diharapkan dapat mempercepat proses administrasi dan meningkatkan kenyamanan pasien.",
+        gambar: "https://plus.unsplash.com/premium_photo-1664298484957-0105d6f398cf?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870",
+        tanggal: "2025-10-15",
+        link: "Baca Selengkapnya"
     },
     {
         id: 2,
-        judul: "Judul Berita 2",
-        isi: "Isi berita 2",
-        gambar: "https://images.unsplash.com/photo-1618856921788-9bc0b6ff8ca2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        tanggal: "2023-01-02",
-        buttonText: "Baca Selengkapnya"
+        judul: "Program Donor Darah Bersama PMI dan RSUD Cideres",
+        isi: "Dalam rangka memperingati Hari Kesehatan Nasional, RSUD Cideres bekerja sama dengan Palang Merah Indonesia (PMI) menggelar kegiatan donor darah massal. Acara ini berhasil mengumpulkan lebih dari 150 kantong darah yang akan disalurkan ke pasien-pasien yang membutuhkan di wilayah Majalengka.",
+        gambar: "https://images.unsplash.com/photo-1615461066159-fea0960485d5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1016",
+        tanggal: "2025-10-28",
+        link: "Baca Selengkapnya"
     },
     {
         id: 3,
-        judul: "Judul Berita 3",
-        isi: "Isi berita 3",
-        gambar: "https://plus.unsplash.com/premium_photo-1676580191820-f5a69ca8ee16?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        tanggal: "2023-01-03",
-        buttonText: "Baca Selengkapnya"     
+        judul: "Pelatihan Higienitas untuk Tenaga Kesehatan RSUD Cideres",
+        isi: "RSUD Cideres mengadakan pelatihan rutin mengenai higienitas dan pengendalian infeksi bagi tenaga kesehatan. Kegiatan ini bertujuan memastikan seluruh staf rumah sakit menerapkan protokol kebersihan yang optimal, guna menjaga keselamatan pasien dan petugas medis.",
+        gambar: "https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?q=80&w=870&auto=format&fit=crop",
+        tanggal: "2025-09-10",
+        link: "Baca Selengkapnya"
     },
     {
         id: 4,
-        judul: "Judul Berita 4",
-        isi: "Isi berita 4",
-        gambar: "https://images.unsplash.com/photo-1618856921788-9bc0b6ff8ca2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        tanggal: "2023-01-04",
-        buttonText: "Baca Selengkapnya"                 
+        judul: "Inovasi Layanan Kesehatan Anak di RSUD Cideres",
+        isi: "Unit Kesehatan Anak RSUD Cideres kini dilengkapi dengan ruang bermain edukatif untuk membantu anak-anak merasa lebih nyaman saat menjalani perawatan. Selain itu, dokter anak juga memberikan edukasi kepada orang tua mengenai pentingnya imunisasi dan gizi seimbang.",
+        gambar: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?q=80&w=870&auto=format&fit=crop",
+        tanggal: "2025-08-20",
+        link: "Baca Selengkapnya"
     },
     {
         id: 5,
-        judul: "Judul Berita 5",
-        isi: "Isi berita 5",
-        gambar: "https://images.unsplash.com/photo-1618856921788-9bc0b6ff8ca2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        tanggal: "2023-01-05",
-        buttonText: "Baca Selengkapnya"                 
+        judul: "RSUD Cideres Tambah 20 Tempat Tidur untuk Ruang Rawat Inap",
+        isi: "Dalam upaya meningkatkan kapasitas pelayanan, RSUD Cideres menambah 20 tempat tidur baru di ruang rawat inap kelas III. Peningkatan ini dilakukan untuk menampung lonjakan pasien dan memberikan pelayanan yang lebih memadai bagi masyarakat sekitar.",
+        gambar: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=870&auto=format&fit=crop",
+        tanggal: "2025-07-05",
+        link: "Baca Selengkapnya"
     },
     {
         id: 6,
-        judul: "Judul Berita 6",
-        isi: "Isi berita 6",
-        gambar: "https://images.unsplash.com/photo-1618856921788-9bc0b6ff8ca2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        tanggal: "2023-01-06",
-        buttonText: "Baca Selengkapnya"                 
+        judul: "RSUD Cideres Adakan Pemeriksaan Kesehatan Gratis",
+        isi: "Sebagai bentuk pengabdian kepada masyarakat, RSUD Cideres menggelar program pemeriksaan kesehatan gratis bagi warga di sekitar rumah sakit. Layanan meliputi pemeriksaan tekanan darah, gula darah, dan konsultasi gizi. Kegiatan ini diharapkan meningkatkan kesadaran masyarakat terhadap pentingnya deteksi dini penyakit.",
+        gambar: "https://images.unsplash.com/photo-1504439468489-c8920d796a29?q=80&w=870&auto=format&fit=crop",
+        tanggal: "2025-06-22",
+        link: "Baca Selengkapnya"
     },
-]
+];

@@ -4,5 +4,5 @@ export interface Berita {
   isi: string;
   gambar: string;
   tanggal: string;
-  buttonText: string;
+  link: string;
 }
