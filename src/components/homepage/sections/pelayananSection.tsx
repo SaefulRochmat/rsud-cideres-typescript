@@ -47,10 +47,10 @@ export default function PelayananSection() {
           <h1 className="text-xl md:text-2xl font-bold text-gray-800 font-quicksand">
             Layanan Spesialis
           </h1>
+          <div className="w-16 h-[3px] bg-[#b12323] mt-2 rounded-full"></div>
           <p className="text-[#646464] mt-1 text-sm md:text-base">
             Layanan spesialis lengkap dengan perawatan profesional dan teknologi modern.
           </p>
-          <div className="w-16 h-[3px] bg-[#ffb120] mt-2 rounded-full"></div>
         </div>
         <Link
           href="/layanan"
@@ -71,12 +71,13 @@ export default function PelayananSection() {
               href={item.href}
               className="group flex flex-col items-center justify-center bg-white rounded-2xl p-6 hover:bg-[#b12323] transition duration-400"
             >
-              <div className="relative aspect-square min-w-[150px] sm:min-w-[180px] md:min-w-[200px] lg:min-w-[200px] mb-4">
+              <div className="flex items-center justify-center aspect-square min-w-[200px] min-h-[200px] md:min-w-[200px] md:min-h-[300px] mb-1">
                 <Image
                   src={item.image}
                   alt={item.title}
-                  fill
-                  className="rounded-full object-cover border-4 border-white shadow-md group-hover:translate-y-14 transition-transform duration-300"
+                  width={500}
+                  height={500}
+                  className="rounded-full object-cover w-[130px] h-[130px] md:w-[150px] md:h-[150px] border-4 border-white shadow-md group-hover:translate-y-14 transition-transform duration-300"
                 />
               </div>
               <h3 className="text-lg font-medium text-[#646464] text-center transition-all duration-1000 group-hover:-translate-y-41 md:group-hover:-translate-y-55 group-hover:text-white/80">

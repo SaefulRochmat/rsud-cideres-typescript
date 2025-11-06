@@ -12,7 +12,7 @@ export default function Navbar() {
         setIsOpen(!isOpen);
     }
     return(
-        <nav className="fixed top-0 left-0 w-full bg-white/80 shadow-md z-50">
+        <nav className="fixed top-0 left-0 w-full bg-white/90 shadow-md z-50">
             <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
                 {/* Logo */}
                 <div className="flex items-start">
@@ -20,8 +20,8 @@ export default function Navbar() {
                         <Image
                             src="http://rsudcideres.majalengkakab.go.id/vendor/front/assets/img/logo-header.png"
                             alt="logo"
-                            width={350}
-                            height={300}
+                            width={300}
+                            height={200}
                             className="object-contain"
                         />
                     </Link>

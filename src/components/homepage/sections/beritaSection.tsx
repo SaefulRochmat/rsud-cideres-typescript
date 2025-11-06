@@ -2,12 +2,13 @@
 import Image from "next/image";
 import { Berita } from "@/types/homepage/berita";
 import Link from "next/link";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 export default function BeritaSection({berita}: {berita: Berita[]}) {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto mt-6 px-4 py-6">
+    <section className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-6 max-w-7xl mx-auto mt-6 px-2 py-4 md:px-4 md:py-6">
       {/* Header */}
-      <div className="col-span-1 md:col-span-3 flex flex-col items-center justify-center mb-4">
+      <div className="col-span-2 md:col-span-3 flex flex-col items-center justify-center mb-4">
         <h1 className="text-xl md:text-2xl font-quicksand font-extrabold text-gray-800 tracking-wider">
           BERITA & INFORMASI
         </h1>
@@ -17,13 +18,13 @@ export default function BeritaSection({berita}: {berita: Berita[]}) {
       </div>
 
       {/* Card berita */}
-      {berita.slice(0, 3).map((item) => (
+      {berita.slice(0, 6).map((item) => (
         <div
           key={item.id}
-          className="flex flex-col bg-white rounded-none overflow-hidden transition-all duration-300 group px-4 py-6"
+          className="flex flex-col bg-white rounded-none overflow-hidden transition-all duration-300 group px-4 py-6 cursor-pointer"
         >
           {/* Gambar dengan efek hover shimmer + scale */}
-          <div className="relative rounded-3xl overflow-hidden aspect-[3/2]">
+          <Link href={item.link} className="relative rounded-3xl overflow-hidden aspect-[3/2]">
             <Image
               src={item.gambar}
               alt={item.judul}
@@ -48,22 +49,22 @@ export default function BeritaSection({berita}: {berita: Berita[]}) {
                 "
               />
             </div>
-          </div>
+          </Link>
 
           {/* Konten */}
           <div className="flex flex-col gap-1 mt-3">
-            <h3 className="text-base md:text-lg lg:text-xl font-bold text-[#646464] transition-colors duration-300 group-hover:text-gray-800">
+            <h1 className="text-xl md:text-lg lg:text-xl line-clamp-3 font-bold text-[#646464] transition-colors duration-300 group-hover:text-gray-800">
               {item.judul}
-            </h3>
-            <p className="text-xs md:text-sm text-[#646464]">{item.tanggal}</p>
+            </h1>
+            <h3 className="text-xs md:text-sm text-[#646464]">{item.tanggal}</h3>
             <p className="text-xs md:text-sm text-[#646464] mt-2 line-clamp-3">
               {item.isi}
             </p>
             <Link
               href={item.link || "#"}
-              className="text-[#b12323] text-sm font-semibold mt-3 hover:underline transition-colors"
+              className="flex items-center gap-2 text-[#b12323] text-sm font-semibold mt-3 hover:underline transition-colors"
             >
-              {item.link}
+              {item.link}<MdOutlineKeyboardDoubleArrowRight className="text-lg transition duration-700 group-hover:translate-x-8"/>
             </Link>
           </div>
         </div>
