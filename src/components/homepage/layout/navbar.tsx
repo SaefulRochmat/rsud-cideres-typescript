@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Nav_Items } from "@/lib/homepage/constants";
 import { navItem } from "@/types/homepage/navbar";
 import Image from "next/image";
+import Logo from "@/public/logos/RSUDCIDERES1.png"
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -12,17 +13,17 @@ export default function Navbar() {
         setIsOpen(!isOpen);
     }
     return(
-        <nav className="fixed top-0 left-0 w-full bg-white/90 shadow-md z-50">
+        <nav className="fixed top-0 left-0 w-full bg-[#F2F2F2] shadow-md z-50">
             <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
                 {/* Logo */}
-                <div className="flex items-start">
+                <div className="flex items-center max-w-[190px] max-h-[100px]">
                     <Link href="/">
                         <Image
-                            src="http://rsudcideres.majalengkakab.go.id/vendor/front/assets/img/logo-header.png"
+                            src={Logo}
                             alt="logo"
-                            width={300}
-                            height={200}
-                            className="object-contain"
+                            width={500}
+                            height={500}
+                            className="object-contain w-full h-full"
                         />
                     </Link>
                 </div>
@@ -34,7 +35,7 @@ export default function Navbar() {
                             key={item.href} 
                             href={item.href}
                             target={item.external ? "_blank" : "_self"}
-                            className="text-[#646464] underline-offset-6 hover:text-[#f53030] transition duration-400 ease-in-out"
+                            className="text-[#838381] underline-offset-6 hover:text-[#C62D30] transition duration-400 ease-in-out"
                         >
                             {item.label}
                         </Link>
@@ -49,17 +50,17 @@ export default function Navbar() {
                     aria-expanded={isOpen}
                 >
                     <span
-                        className={`w-6 h-1 bg-gray-800 transition-all duration-300 ease-in-out ${
+                        className={`w-6 h-1 bg-[#C62D30] transition-all duration-300 ease-in-out ${
                             isOpen ? 'translate-y-[6px] rotate-45' : ''
                         }`}
                     ></span>
                     <span
-                        className={`w-6 h-1 bg-gray-800 transition-all duration-300 ease-in-out ${
+                        className={`w-6 h-1 bg-[#C62D30] transition-all duration-300 ease-in-out ${
                             isOpen ? 'opacity-0' : 'opacity-100'
                         }`}
                     ></span>
                     <span
-                        className={`w-6 h-1 bg-gray-800 transition-all duration-300 ease-in-out ${
+                        className={`w-6 h-1 bg-[#838381] transition-all duration-300 ease-in-out ${
                             isOpen ? '-translate-y-[6px] -rotate-45' : ''
                         }`}
                     ></span>
@@ -67,7 +68,7 @@ export default function Navbar() {
 
                 {/* Menu Mobile */}
                 <div
-                    className={`md:hidden absolute top-full left-0 w-full bg-white ${
+                    className={`md:hidden absolute top-full left-0 w-full bg-[#F2F2F2] ${
                         isOpen
                             ? 'opacity-100 translate-y-0 max-h-[60vh] shadow-md pointer-events-auto'
                             : 'opacity-0 -translate-y-2 max-h-0 pointer-events-none'
@@ -80,7 +81,7 @@ export default function Navbar() {
                                 key={item.href} 
                                 href={item.href}
                                 target={item.external ? "_blank" : "_self"}
-                                className="w-full text-gray-700 hover:text-red-500 hover:shadow-md hover:-translate-y-1 transition duration-300 px-5 py-2"
+                                className="w-full text-[#838381] hover:text-[#C62D30] hover:shadow-md hover:-translate-y-1 transition duration-300 px-5 py-2"
                             >
                                 {item.label}
                             </Link>

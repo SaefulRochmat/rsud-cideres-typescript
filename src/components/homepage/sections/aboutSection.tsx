@@ -13,8 +13,8 @@ export default function AboutSection() {
         />
       </div>
       <div className="flex flex-col w-full px-3 py-3">
-        <h3 className="text-[#b12323]/90 font-bold">TENTANG RSUD CIDERES</h3>
-        <h1 className="text-xl md:text-4xl font-bold text-gray-800/95">Melayani Masyarakat dengan Sepenuh Hati</h1>
+        <h3 className="text-[#C62D30] font-bold">TENTANG RSUD CIDERES</h3>
+        <h1 className="text-xl md:text-4xl font-bold text-[#010000]">Melayani Masyarakat dengan Sepenuh Hati</h1>
         <p className="text-[#1f1e1e] mt-1 md:mt-4 text-sm md:text-base">
           RSUD CIDERES adalah rumah sakit yang berdedikasi untuk memberikan
           layanan kesehatan terbaik kepada masyarakat. Dengan tim dokter

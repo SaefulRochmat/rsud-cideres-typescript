@@ -73,13 +73,13 @@ export default function ImageSlider({
         {/* Tombol navigasi */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-[#FAFAFA] p-2 rounded-full hover:bg-black/60 hover:text-[#f53030] transition"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-[#F2F2F2] p-2 rounded-full hover:bg-black/60 hover:text-[#FFC107] transition"
         >
           ❮
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-[#FAFAFA] p-2 rounded-full hover:bg-black/60 hover:text-[#f53030] transition"
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-[#F2F2F2] p-2 rounded-full hover:bg-black/60 hover:text-[#FFC107] transition"
         >
           ❯
         </button>
@@ -91,7 +91,7 @@ export default function ImageSlider({
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-6 h-1 rounded-full ${
-                index === currentIndex ? "bg-[#FFCC00]" : "bg-[#646464]"
+                index === currentIndex ? "bg-[#FFC107]" : "bg-[#838381]"
               }`}
             ></button>
           ))}
@@ -103,19 +103,19 @@ export default function ImageSlider({
         <div className="max-w-7xl mx-auto px-3">
           {/* Mobile: Card Slider */}
           <div className="md:hidden relative">
-            <div className="bg-[#b12323] h-[160px] shadow-lg rounded-md overflow-hidden p-4">
-              <h3 className="text-[#ffda45] text-lg md:font-light">{cardData[cardIndex].title}</h3>
-              <h2 className="text-sm md:text-xl text-[#e7e7e7]  font-semibold mt-1 md:mt-4">{cardData[cardIndex].subtitle}</h2>
-              <p className="text-[#E0E8E3]/90  mt-1 md:mt-4">{cardData[cardIndex].description}</p>
+            <div className="bg-[#C62D30] h-[160px] shadow-xl rounded-md overflow-hidden p-4">
+              <h3 className="text-[#FFD166] text-sm font-medium">{cardData[cardIndex].title}</h3>
+              <h2 className="text-sm font-bold text-[#fdfdfd] mt-1 md:mt-4 tracking-wider">{cardData[cardIndex].subtitle}</h2>
+              <p className="text-[#dadada] text-sm mt-1 md:mt-4">{cardData[cardIndex].description}</p>
             </div>
           </div>
           {/* Tablet & Desktop: Grid Cards */}
-          <div className="hidden md:grid grid-cols-1 md:grid-cols-3 bg-[#b12323] shadow-lg rounded-md overflow-hidden py-3 md:py-5">
+          <div className="hidden md:grid grid-cols-1 md:grid-cols-3 bg-[#C62D30] shadow-lg rounded-md overflow-hidden py-3 md:py-5">
             {cardData.map((card, idx) => (
-              <div key={idx} className={`py-3 md:py-3 px-5 md:px-6${idx !== 0 ? " border-t md:border-t-0 md:border-l border-slate-300/70 border-opacity-30" : ""}`}>
-                <h3 className="text-[#ffda45] text-lg md:font-light">{card.title}</h3>
-                <h2 className="text-sm md:text-xl text-[#e7e7e7]  font-semibold mt-1 md:mt-4">{card.subtitle}</h2>
-                <p className="text-[#E0E8E3]/90  mt-1 md:mt-4">{card.description}</p>
+              <div key={idx} className={`py-3 md:py-3 px-5 md:px-6${idx !== 0 ? " border-t md:border-t-0 md:border-l border-[#dadada] border-opacity-30" : ""}`}>
+                <h3 className="text-[#FFD166] text-sm md:text-base md:font-medium">{card.title}</h3>
+                <h2 className="text-sm md:text-lg text-[#fdfdfd] font-bold mt-1 md:mt-2">{card.subtitle}</h2>
+                <p className="text-[#dadada] text-sm mt-1 md:mt-2">{card.description}</p>
               </div>
             ))}
           </div>

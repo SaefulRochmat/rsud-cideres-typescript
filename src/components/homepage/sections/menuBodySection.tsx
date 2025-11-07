@@ -1,19 +1,32 @@
 'use client'
 import { JSX } from "react";
 import { BodyMenu } from "@/types/homepage/bodymenu";
-import { Button } from "../ui/button";
+import { GiHeartPlus, GiStethoscope} from "react-icons/gi";
+import { FaCalendarCheck } from "react-icons/fa";
+import { IoPhonePortraitOutline } from "react-icons/io5";
+import { IconType } from "react-icons";
 
 export default function MenuBodySection({ menus }: { menus: BodyMenu[] }): JSX.Element {
-  const colors: string[] = ['bg-[#0080FF]', 'bg-[#0076FF]', 'bg-[#0070FF]', 'bg-[#0066FF]'];
+  const icons: IconType[] = [GiHeartPlus, GiStethoscope, FaCalendarCheck, IoPhonePortraitOutline];
+  
   return (
-    <section className="flex flex-col md:flex-col lg:flex-row gap-2 md:gap-2 lg:gap-0.5 max-w-7xl justify-between items-center mt-1 mx-auto px-1 py-2">
-        {menus.map((menu, index) => (
-            <div key={index} className={`hover:translate-y-[-10px] transition duration-300 w-full h-[200px] flex flex-col items-start justify-between relative ${colors[index]}`}>
-                <h2 className="text-2xl font-semibold text-white absolute top-4 left-4">{menu.title}</h2>
-                <Button label={menu.buttonText} onClick={() => alert("Fitur ini belum tersedia")}>
-                </Button>
+    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto py-8 px-4 bg-[#F5F6FA] rounded-2xl cursor-pointer">
+      {menus.map((menu, index) => {
+        const Icon = icons[index % icons.length];
+        return (
+          <div
+            key={index}
+            className="group bg-white rounded-2xl shadow-sm hover:shadow-md transition-transform duration-300 hover:-translate-y-2 p-6 flex flex-col justify-between border border-gray-100"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-[#C62D30]/10 p-3 rounded-xl">
+                <Icon className="w-6 h-6 text-[#C62D30]" />
+              </div>
+              <h2 className="text-xl font-semibold text-[#2E2E2E]">{menu.title}</h2>
             </div>
-        ))}
+          </div>
+        );
+      })}
     </section>
   );
 }
