@@ -55,7 +55,7 @@ export default function BeritaSection({berita}: {berita: Berita[]}) {
           <div className="flex flex-col gap-1 mt-3">
             <h1 className="text-xl md:text-lg lg:text-xl line-clamp-3 font-bold text-[#646464] transition-colors duration-300 group-hover:text-gray-800">
               {item.judul}
-            </h1>
+            </h1> 
             <h3 className="text-xs md:text-sm text-[#646464]">{item.tanggal}</h3>
             <p className="text-xs md:text-sm text-[#646464] mt-2 line-clamp-3">
               {item.isi}
