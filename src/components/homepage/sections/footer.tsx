@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function Footer() {
     return(
-        <section className="bg-gray-800 w-full text-white py-6 mt-10">
+        <section className="bg-gray-800 w-full py-6 mt-10">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 mb-4">
                     <div className="flex items-center justify-center sm:justify-start p-4 rounded-xl">
-                        <div className="bg-white p-4 rounded-xl w-54 sm:w-56 md:w-64">
+                        <div className="bg-white p-4 rounded-xl w-54 sm:w-56 md:w-64 transition duration-1000 ease-in-out hover:scale-105">
                             <Image
                                 src="http://rsudcideres.majalengkakab.go.id/vendor/front/assets/img/logo-header.png"
                                 alt="Logo RSUD Cideres"
@@ -18,8 +18,9 @@ export default function Footer() {
                     </div>
 
                     <div className="px-4 py-2">
-                        <h3 className="font-semibold text-lg sm:text-xl lg:text-2xl">Gedung Rahayu</h3>
-                        <p className="text-sm sm:text-base lg:text-lg mt-4 font-light leading-relaxed">
+                        <h3 className="text-lg font-semibold text-white">Gedung Rahayu</h3>
+                        <div className="bg-[#C62D30] w-28 h-1 rounded-full mt-1 mb-4"></div>
+                        <p className="text-sm mt-4 leading-relaxed text-[#a1a1a1] transition duration-300 ease-in-out hover:text-[#FFD166]">
                             Jl. Raya Cideres - Kadipaten, No 180, Bojong Cideres
                             <br className="block sm:hidden" />
                             Kecamatan. Dawuan - Majalengka
@@ -29,8 +30,9 @@ export default function Footer() {
                     </div>
 
                     <div className="px-4 py-2">
-                        <h3 className="font-semibold text-lg sm:text-xl lg:text-2xl">Kontak Kami</h3>
-                        <p className="text-sm sm:text-base lg:text-lg mt-4 font-light leading-relaxed">
+                        <h3 className="text-lg font-semibold text-white">Kontak Kami</h3>
+                        <div className="bg-[#C62D30] w-28 h-1 rounded-full mt-1 mb-4"></div>
+                        <p className="text-sm mt-4 leading-relaxed text-[#a1a1a1] transition duration-300 ease-in-out hover:text-[#FFD166]">
                             Phone : (0233) 661003<br />
                             Fax : (0233) 661082<br />
                             Email : rsudcideres@majalengkakab.go.id<br />
@@ -38,9 +40,9 @@ export default function Footer() {
                         </p>
                     </div>
                 </div>
-
-                <div className="text-center">
-                    <p className="text-xs sm:text-sm text-gray-300">
+                <hr className="text-[#535353]"></hr>
+                <div className="text-center mt-8">
+                    <p className="text-sm text-[#a1a1a1]">
                         &copy; {new Date().getFullYear()} Rumah Sakit Umum Daerah Cideres, Majalengka. All rights reserved.
                     </p>
                 </div>
