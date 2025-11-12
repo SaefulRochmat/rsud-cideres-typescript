@@ -5,6 +5,7 @@ import MenuBodySection from "@/components/homepage/sections/menuBodySection";
 import PelayananSection from "@/components/homepage/sections/pelayananSection";
 import ContactBar from "@/components/homepage/ui/contactBar";
 import HeroSection from "@/components/homepage/ui/ImageSlider";
+import ScrollToTopButton from "@/components/homepage/ui/ScrollWidgetToTop";
 import { beritaData, BoyMenus, SLIDES } from "@/lib/homepage/constants";
 
 export default function Home() {
@@ -17,6 +18,8 @@ export default function Home() {
       <PelayananSection />
       <BeritaSection berita={beritaData} />
       <Footer />
+
+      <ScrollToTopButton/>
     </>
   );
 }
