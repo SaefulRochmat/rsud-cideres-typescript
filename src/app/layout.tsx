@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Quicksand } from "next/font/google";
 import Navbar from "@/components/homepage/layout/navbar";
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
+import 'aos/dist/aos.css';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

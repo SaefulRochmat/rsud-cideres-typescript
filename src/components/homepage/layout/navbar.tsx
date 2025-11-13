@@ -1,19 +1,25 @@
+//src/components/homepages/layout/navbar.tsx
+
 'use client'
 import Link from "next/link";
 import { useState } from "react";
 import { Nav_Items } from "@/lib/homepage/constants";
 import { navItem } from "@/types/homepage/navbar";
 import Image from "next/image";
-import Logo from "@/public/logos/RSUDCIDERES1.png"
+import Logo from "@/public/logos/RSUDCIDERES1.png";
+import useAOS from "@/hooks/homepage/useAOS";
+
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-
     const toggleMenu = (): void => {
         setIsOpen(!isOpen);
     }
+
+    // ✅ panggil hook untuk inisialisasi AOS
+    useAOS();
     return(
-        <nav className="fixed top-0 left-0 w-full bg-[#F2F2F2] shadow-md z-50">
+        <nav data-aos="fade-down" className="fixed top-0 left-0 w-full bg-[#F2F2F2] shadow-md z-50">
             <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
                 {/* Logo */}
                 <div className="flex items-center max-w-[190px] max-h-[100px]">
