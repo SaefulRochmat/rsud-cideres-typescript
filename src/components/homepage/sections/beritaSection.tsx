@@ -3,12 +3,14 @@ import Image from "next/image";
 import { Berita } from "@/types/homepage/berita";
 import Link from "next/link";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import useAOS from "@/hooks/homepage/useAOS";
 
 export default function BeritaSection({berita}: {berita: Berita[]}) {
+  useAOS()
   return (
-    <section className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-6 max-w-7xl mx-auto mt-6 px-2 py-4 md:px-4 md:py-6">
+    <section className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-6 max-w-7xl mx-auto mt-6 px-2 py-4 md:px-4 md:py-6 bg-[#F5F6FA] rounded-2xl">
       {/* Header */}
-      <div className="col-span-2 md:col-span-3 flex flex-col items-center justify-center mb-4">
+      <div data-aos="fade-up" className="col-span-2 md:col-span-3 flex flex-col items-center justify-center mb-4">
         <h1 className="text-xl md:text-2xl font-quicksand font-extrabold text-gray-800 tracking-wider">
           BERITA & INFORMASI
         </h1>
@@ -20,6 +22,7 @@ export default function BeritaSection({berita}: {berita: Berita[]}) {
       {/* Card berita */}
       {berita.slice(0, 6).map((item) => (
         <div
+          data-aos="fade-up"
           key={item.id}
           className="flex flex-col bg-white rounded-none overflow-hidden transition-all duration-300 group px-4 py-6 cursor-pointer"
         >

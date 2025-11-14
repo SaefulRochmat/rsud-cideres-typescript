@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import useAOS from "@/hooks/homepage/useAOS";
 
 interface Layanan {
   title: string;
@@ -39,11 +40,13 @@ const layananList: Layanan[] = [
 ];
 
 export default function PelayananSection() {
+  // untuk AOS
+  useAOS();
   return (
     <section className="max-w-7xl mx-auto px-4 py-16">
       {/* Header */}
       <div className="flex justify-between items-center mb-8 flex-wrap gap-4">
-        <div>
+        <div data-aos="fade-right">
           <h1 className="text-xl md:text-2xl font-bold text-gray-800 font-quicksand">
             Layanan Spesialis
           </h1>
@@ -53,6 +56,7 @@ export default function PelayananSection() {
           </p>
         </div>
         <Link
+          data-aos="fade-left"
           href="/layanan"
           className="text-[#b12323] font-primary font-semibold hover:underline hover:underline-offset-4"
         >
@@ -61,7 +65,7 @@ export default function PelayananSection() {
       </div>
 
       {/* Grid Cards */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+      <div data-aos="fade-up" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {layananList.map((item, index) => (
           <motion.div
             key={index}

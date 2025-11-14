@@ -1,8 +1,11 @@
+'use client'
 import Image from "next/image";
+import useAOS from "@/hooks/homepage/useAOS";
 
 export default function Footer() {
+    useAOS()
     return(
-        <section className="bg-gray-800 w-full py-6 mt-10">
+        <section data-aos="fade-up" className="bg-gray-800 w-full py-6 mt-10">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6 mb-4">
                     <div className="flex items-center justify-center sm:justify-start p-4 rounded-xl">

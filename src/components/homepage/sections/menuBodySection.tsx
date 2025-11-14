@@ -22,7 +22,7 @@ export default function MenuBodySection({ menus }: { menus: BodyMenu[] }): JSX.E
               <div className="bg-[#C62D30]/10 p-3 rounded-xl">
                 <Icon className="w-6 h-6 text-[#C62D30]" />
               </div>
-              <h2 className="text-xl font-semibold text-[#2E2E2E]">{menu.title}</h2>
+              <h2 className="text-xl font-semibold text-[#646464] transition duration-300 ease-in-out group-hover:text-black">{menu.title}</h2>
             </div>
           </div>
         );
